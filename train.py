@@ -469,10 +469,11 @@ if __name__ == '__main__':
     if not opt.evolve:  # Train normally
         try:
             # Start Tensorboard with "tensorboard --logdir=runs", view at http://localhost:6006/
-            from torch.utils.tensorboard import SummaryWriter
-
+            #from torch.utils.tensorboard import SummaryWriter
+            from tensorboardX import SummaryWriter
             tb_writer = SummaryWriter()
         except:
+            print(111)
             pass
 
         prebias()  # optional
